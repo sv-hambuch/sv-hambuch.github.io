@@ -1,0 +1,51 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Über uns</p>
+    <h1>Der SV Hambuch</h1>
+    <p class="lead"><%= club.mission %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container stats-grid">
+    <article>
+      <span class="stat-number"><%= club.founded %></span>
+      <p>Gründungsjahr</p>
+    </article>
+    <article>
+      <span class="stat-number"><%= club.members %>+</span>
+      <p>Mitglieder aus Hambuch und Umgebung</p>
+    </article>
+    <article>
+      <span class="stat-number"><%= club.volunteers %></span>
+      <p>Ehrenamtliche, die sich Woche für Woche einbringen</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <h2>Unsere Werte</h2>
+      <p>Was uns auf und neben dem Platz antreibt.</p>
+    </div>
+    <ul class="values-list">
+      <% club.values.forEach((value) => { %>
+        <li><span><%= value %></span></li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container">
+    <h2>Meilensteine</h2>
+    <div class="grid two">
+      <% club.highlights.forEach((item) => { %>
+        <article class="card">
+          <p><%= item %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | SV Hambuch</title>
+  <link rel="icon" type="image/png" href="/images/Logo_SV_Hambuch.png">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=montserrat:400,500,600|merriweather:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="page-<%= currentPage %>">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="Zur Startseite SV Hambuch">
+        <img src="/images/Logo_SV_Hambuch.png" alt="Logo SV Hambuch">
+        <span>SV Hambuch</span>
+      </a>
+      <button class="nav-toggle" aria-label="Navigation umschalten" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <% navItems.forEach((item) => { %>
+            <li class="<%= currentPage === item.key ? 'active' : '' %>">
+              <a href="<%= item.url %>"><%= item.label %></a>
+            </li>
+          <% }) %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <%- include(template) %>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <h3>SV Hambuch e.V.</h3>
+        <p>Sportplatzstraße 8 · 56761 Hambuch</p>
+        <p>Telefon: 02653 123456 · Mail: <a href="mailto:info@sv-hambuch.de">info@sv-hambuch.de</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="/verein">Verein</a>
+        <a href="/mannschaften">Mannschaften</a>
+        <a href="/trainingszeiten">Trainingszeiten</a>
+        <a href="/kontakt">Kontakt</a>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> SV Hambuch e.V. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Trainingsplan</p>
+    <h1>Trainingszeiten</h1>
+    <p class="lead">Alle Trainings finden auf dem Sportplatz Hambuch oder in der Mehrzweckhalle statt.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Fußball</h2>
+    <div class="schedule-table">
+      <div class="table-head">
+        <span>Team</span>
+        <span>Tage</span>
+        <span>Uhrzeit</span>
+      </div>
+      <% schedule.football.forEach((entry) => { %>
+        <div class="table-row">
+          <span><%= entry.team %></span>
+          <span><%= entry.days %></span>
+          <span><%= entry.time %></span>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container">
+    <h2>Breitensport & Fitness</h2>
+    <div class="schedule-table">
+      <div class="table-head">
+        <span>Kurs</span>
+        <span>Tag</span>
+        <span>Uhrzeit</span>
+      </div>
+      <% schedule.fitness.forEach((entry) => { %>
+        <div class="table-row">
+          <span><%= entry.course %></span>
+          <span><%= entry.day %></span>
+          <span><%= entry.time %></span>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

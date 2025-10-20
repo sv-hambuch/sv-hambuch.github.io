@@ -1,0 +1,64 @@
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">SV Hambuch</p>
+      <h1><%= hero.heading %></h1>
+      <p class="lead"><%= hero.subheading %></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="<%= hero.primaryCta.href %>"><%= hero.primaryCta.label %></a>
+        <a class="btn secondary" href="<%= hero.secondaryCta.href %>"><%= hero.secondaryCta.label %></a>
+      </div>
+    </div>
+    <img class="hero-logo" src="/images/Logo_SV_Hambuch.png" alt="Wappen des SV Hambuch">
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container">
+    <header class="section-header">
+      <h2>Wofür wir stehen</h2>
+      <p>Gemeinschaft, sportlicher Erfolg und Nachwuchsförderung – dafür engagieren sich Ehrenamtliche und Aktive gleichermaßen.</p>
+    </header>
+    <div class="grid three">
+      <% highlights.forEach((item) => { %>
+        <article class="card">
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <h2>Aktuelle News</h2>
+      <p>Bleib auf dem Laufenden über Spiele, Events und Aktionen beim SV Hambuch.</p>
+    </div>
+    <a class="btn link" href="/news">Alle News ansehen</a>
+  </div>
+  <div class="container news-preview">
+    <% news.slice(0, 3).forEach((entry) => { %>
+      <article class="news-card">
+        <time datetime="<%= entry.date %>"><%= entry.formattedDate %></time>
+        <h3><%= entry.title %></h3>
+        <p><%= entry.summary %></p>
+        <a class="read-more" href="/news#<%= entry.slug %>">Mehr erfahren</a>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="container cta-box">
+    <div>
+      <h2>Lust auf Teamgeist?</h2>
+      <p>Ganz egal ob Jugend, Senioren oder Breitensport – wir freuen uns auf neue Gesichter. Schau beim Training vorbei oder nimm Kontakt mit uns auf.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn light" href="/trainingszeiten">Trainingszeiten</a>
+      <a class="btn outline" href="/kontakt">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>

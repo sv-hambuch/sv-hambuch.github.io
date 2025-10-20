@@ -1,0 +1,20 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Aktuelles</p>
+    <h1>Neuigkeiten aus dem Verein</h1>
+    <p class="lead">Berichte, Spielankündigungen und Projekte rund um den SV Hambuch.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container news-list">
+    <% news.forEach((entry) => { %>
+      <article class="card news-entry" id="<%= entry.slug %>">
+        <time datetime="<%= entry.date %>"><%= entry.formattedDate %></time>
+        <h2><%= entry.title %></h2>
+        <p><%= entry.summary %></p>
+        <a class="read-more" href="mailto:info@sv-hambuch.de?subject=R%C3%BCckfrage%20zu%20<%= encodeURIComponent(entry.title) %>">Rückfragen zur News?</a>
+      </article>
+    <% }) %>
+  </div>
+</section>
