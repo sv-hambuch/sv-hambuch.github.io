@@ -2,7 +2,7 @@ module.exports = {
   hero: {
     heading: 'Willkommen beim SV Hambuch',
     subheading:
-      'Im Jubiläumsjahr 2026 stehen fünf Jahrzehnte Vereinsleben mit gemeinsamen Erinnerungen im Mittelpunkt.'
+      "", //'Im Jubiläumsjahr 2026 stehen fünf Jahrzehnte Vereinsleben mit gemeinsamen Erinnerungen im Mittelpunkt.'
   },
   anniversary: {
     eyebrow: 'Jubiläum 2026',
