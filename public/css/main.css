@@ -1301,6 +1301,23 @@ a:focus-visible {
     align-items: start;
   }
 
+  .home-welcome {
+    min-height: auto;
+  }
+
+  .home-welcome-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: start;
+  }
+
+  .home-welcome-logo {
+    order: -1;
+    width: min(72vw, 320px);
+    justify-self: start;
+    transform: none;
+  }
+
   .main-nav.open {
     transform: scaleY(1);
     opacity: 1;
@@ -1319,6 +1336,18 @@ a:focus-visible {
 
   .logo img {
     width: 68px;
+  }
+
+  .home-welcome {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .home-welcome-inner {
+    gap: 1.25rem;
+  }
+
+  .home-welcome-logo {
+    width: min(78vw, 280px);
   }
 
   .hero-actions {
