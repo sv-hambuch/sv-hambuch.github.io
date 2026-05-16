@@ -1,33 +1,56 @@
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Über uns</p>
-    <h1>Der SV Hambuch</h1>
+    <p class="hero-badge">1976–2026 · 50 Jahre SV Hambuch</p>
+    <h1>Der Verein hinter Sportplatz, Dorfmeisterschaft und Jubiläum</h1>
     <p class="lead"><%= club.mission %></p>
   </div>
 </section>
 
 <section class="section">
   <div class="container stats-grid">
-    <article>
-      <span class="stat-number"><%= club.founded %></span>
-      <p>Gründungsjahr</p>
-    </article>
-    <article>
-      <span class="stat-number"><%= club.members %>+</span>
-      <p>Mitglieder aus Hambuch und Umgebung</p>
-    </article>
-    <article>
-      <span class="stat-number"><%= club.volunteers %></span>
-      <p>Ehrenamtliche, die sich Woche für Woche einbringen</p>
-    </article>
+    <% club.stats.forEach((item) => { %>
+      <article>
+        <span class="stat-number"><%= item.value %></span>
+        <p><%= item.label %></p>
+      </article>
+    <% }) %>
   </div>
 </section>
 
 <section class="section">
-  <div class="container split">
+  <div class="container story-columns">
+    <% club.intro.forEach((paragraph) => { %>
+      <article class="card">
+        <p><%= paragraph %></p>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container">
+    <header class="section-header">
+      <h2>Zeitleiste</h2>
+      <p>Die wichtigsten öffentlich belegten Eckpunkte des heutigen Vereinsprofils.</p>
+    </header>
+    <div class="timeline">
+      <% club.timeline.forEach((item) => { %>
+        <article class="card">
+          <p class="timeline-year"><%= item.year %></p>
+          <h3><%= item.title %></h3>
+          <p><%= item.text %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split section-top">
     <div>
       <h2>Unsere Werte</h2>
-      <p>Was uns auf und neben dem Platz antreibt.</p>
+      <p>Was den SV Hambuch im Ort und im sportlichen Alltag auszeichnet.</p>
     </div>
     <ul class="values-list">
       <% club.values.forEach((value) => { %>
@@ -37,15 +60,12 @@
   </div>
 </section>
 
-<section class="section highlight">
-  <div class="container">
-    <h2>Meilensteine</h2>
-    <div class="grid two">
-      <% club.highlights.forEach((item) => { %>
-        <article class="card">
-          <p><%= item %></p>
-        </article>
-      <% }) %>
-    </div>
+<section class="section">
+  <div class="container grid three">
+    <% club.highlights.forEach((item) => { %>
+      <article class="card">
+        <p><%= item %></p>
+      </article>
+    <% }) %>
   </div>
 </section>

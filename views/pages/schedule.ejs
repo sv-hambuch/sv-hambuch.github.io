@@ -1,26 +1,29 @@
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Trainingsplan</p>
-    <h1>Trainingszeiten</h1>
-    <p class="lead">Alle Trainings finden auf dem Sportplatz Hambuch oder in der Mehrzweckhalle statt.</p>
+    <p class="eyebrow">Sportstätten & Termine</p>
+    <h1>Die wichtigsten Vereinsorte des SV Hambuch</h1>
+    <p class="lead">Statt unzuverlässiger Platzhalterzeiten zeigt diese Seite die realen Orte und wiederkehrenden Formate, die öffentlich für den Verein belegt sind.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2>Fußball</h2>
-    <div class="schedule-table">
-      <div class="table-head">
-        <span>Team</span>
-        <span>Tage</span>
-        <span>Uhrzeit</span>
-      </div>
-      <% schedule.football.forEach((entry) => { %>
-        <div class="table-row">
-          <span><%= entry.team %></span>
-          <span><%= entry.days %></span>
-          <span><%= entry.time %></span>
-        </div>
+    <header class="section-header">
+      <h2>Vereinsorte</h2>
+      <p>Diese Anlagen und Treffpunkte bilden die Grundlage für Spielbetrieb, Training und Vereinsorganisation.</p>
+    </header>
+    <div class="grid two">
+      <% schedule.venues.forEach((venue) => { %>
+        <article class="card venue-card">
+          <h3><%= venue.name %></h3>
+          <p class="meta"><%= venue.address %></p>
+          <p><%= venue.description %></p>
+          <ul class="bullet-list">
+            <% venue.details.forEach((detail) => { %>
+              <li><%= detail %></li>
+            <% }) %>
+          </ul>
+        </article>
       <% }) %>
     </div>
   </div>
@@ -28,20 +31,19 @@
 
 <section class="section highlight">
   <div class="container">
-    <h2>Breitensport & Fitness</h2>
-    <div class="schedule-table">
-      <div class="table-head">
-        <span>Kurs</span>
-        <span>Tag</span>
-        <span>Uhrzeit</span>
-      </div>
-      <% schedule.fitness.forEach((entry) => { %>
-        <div class="table-row">
-          <span><%= entry.course %></span>
-          <span><%= entry.day %></span>
-          <span><%= entry.time %></span>
-        </div>
+    <header class="section-header">
+      <h2>Wiederkehrende Formate</h2>
+      <p>Diese Termine und Veranstaltungsformen tauchen öffentlich rund um den SV Hambuch auf.</p>
+    </header>
+    <div class="grid two">
+      <% schedule.recurringEvents.forEach((entry) => { %>
+        <article class="card">
+          <h3><%= entry.title %></h3>
+          <p class="meta"><%= entry.meta %></p>
+          <p><%= entry.text %></p>
+        </article>
       <% }) %>
     </div>
+    <p class="section-note"><%= schedule.notice %></p>
   </div>
 </section>

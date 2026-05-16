@@ -1,0 +1,10 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#FFF7D1"/>
+  <rect y="480" width="1200" height="240" fill="#345B2C"/>
+  <path d="M0 562L190 426L350 520L548 372L726 512L940 390L1200 536V720H0V562Z" fill="#1E381C"/>
+  <circle cx="1022" cy="152" r="104" fill="#F8D311"/>
+  <rect x="112" y="128" width="460" height="312" rx="18" fill="white" fill-opacity="0.92"/>
+  <text x="158" y="230" fill="#1E381C" font-family="Arial, sans-serif" font-size="38" font-weight="700">SV Hambuch</text>
+  <text x="158" y="298" fill="#1E381C" font-family="Arial, sans-serif" font-size="86" font-weight="700">2026</text>
+  <text x="158" y="356" fill="#50533F" font-family="Arial, sans-serif" font-size="28">Platzhalterbild</text>
+</svg>

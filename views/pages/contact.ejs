@@ -2,44 +2,42 @@
   <div class="container">
     <p class="eyebrow">Melde dich</p>
     <h1>Kontakt zum SV Hambuch</h1>
-    <p class="lead">Du hast Fragen zu Trainings, Mitgliedschaft oder unseren Veranstaltungen? Wir helfen gerne weiter.</p>
+    <p class="lead">Fragen zu Mitgliedschaft, Trainingsorten, Jubiläum oder Vereinsveranstaltungen lassen sich am schnellsten direkt mit dem Verein klären.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container contact-grid">
     <div class="contact-info">
-      <h2>Verein</h2>
+      <h2>Vereinskontakt</h2>
       <address>
-        <% contact.address.forEach((line) => { %>
+        <% contact.postalAddress.forEach((line) => { %>
           <span><%= line %></span>
         <% }) %>
       </address>
-      <p><strong>Telefon:</strong> <a href="tel:+492653123456"><%= contact.phone %></a></p>
-      <p><strong>E-Mail:</strong> <a href="mailto:<%= contact.email %>"><%= contact.email %></a></p>
+      <p><strong><%= contact.contactPerson.role %>:</strong> <%= contact.contactPerson.name %></p>
+      <p><strong>Telefon:</strong> <a href="tel:<%= contact.phoneHref %>"><%= contact.phone %></a></p>
+      <p><%= contact.note %></p>
 
-      <h3>Sprechzeiten Geschäftsstelle</h3>
-      <ul class="bullet-list">
-        <% contact.officeHours.forEach((slot) => { %>
-          <li><strong><%= slot.day %>:</strong> <%= slot.time %></li>
-        <% }) %>
-      </ul>
-
-      <h3>Vorstand</h3>
-      <ul class="contact-board">
-        <% contact.board.forEach((member) => { %>
-          <li>
-            <strong><%= member.role %></strong><br>
-            <span><%= member.name %></span><br>
-            <a href="mailto:<%= member.email %>"><%= member.email %></a>
-          </li>
-        <% }) %>
-      </ul>
+      <div class="contact-stack">
+        <article class="card">
+          <h3>Sportplatz</h3>
+          <% contact.venueAddress.forEach((line) => { %>
+            <p><%= line %></p>
+          <% }) %>
+        </article>
+        <article class="card">
+          <h3>Probstei</h3>
+          <% contact.meetingPlace.forEach((line) => { %>
+            <p><%= line %></p>
+          <% }) %>
+        </article>
+      </div>
     </div>
 
     <form id="formular" class="contact-form" method="post" action="https://formspree.io/f/xaygvapo">
       <h2>Nachricht senden</h2>
-      <p>Deine Anfrage landet direkt beim Vorstandsteam.</p>
+      <p>Deine Anfrage landet direkt beim Verein und ist der beste Weg für aktuelle Rückfragen.</p>
       <label for="name">Name</label>
       <input id="name" name="name" type="text" placeholder="Dein Name" required>
 
@@ -50,7 +48,8 @@
       <select id="topic" name="topic" required>
         <option value="">Bitte auswählen</option>
         <option value="mitgliedschaft">Mitgliedschaft</option>
-        <option value="training">Training & Teams</option>
+        <option value="training">Training & Mannschaften</option>
+        <option value="jubilaeum">Jubiläum 2026</option>
         <option value="veranstaltung">Veranstaltungen</option>
         <option value="sonstiges">Sonstiges</option>
       </select>

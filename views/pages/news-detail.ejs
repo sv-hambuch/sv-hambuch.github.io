@@ -1,0 +1,38 @@
+<section class="page-hero article-hero">
+  <div class="container article-header">
+    <p class="eyebrow"><%= article.category %></p>
+    <h1><%= article.title %></h1>
+    <time datetime="<%= article.date %>"><%= article.formattedDate %></time>
+  </div>
+</section>
+
+<article class="section news-article">
+  <div class="container article-content">
+    <div class="article-layout <%= article.images && article.images.length ? 'has-images' : '' %>">
+      <% if (article.images && article.images.length) { %>
+        <div class="article-gallery">
+          <% article.images.forEach((image) => { %>
+            <figure>
+              <img src="<%= image.src %>" alt="<%= image.alt %>">
+              <% if (image.caption) { %>
+                <figcaption><%= image.caption %></figcaption>
+              <% } %>
+            </figure>
+          <% }) %>
+        </div>
+      <% } %>
+
+      <div class="article-body">
+        <% article.body.forEach((paragraph) => { %>
+          <p><%= paragraph %></p>
+        <% }) %>
+      </div>
+    </div>
+
+    <% if (article.sourceUrl && article.sourceLabel) { %>
+      <a class="read-more article-source" href="<%= article.sourceUrl %>" target="_blank" rel="noreferrer">Quelle: <%= article.sourceLabel %></a>
+    <% } %>
+
+    <a class="read-more article-back-link" href="/#news">Zurück zu den News</a>
+  </div>
+</article>

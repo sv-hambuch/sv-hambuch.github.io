@@ -1,64 +1,135 @@
-<section class="hero">
-  <div class="container hero-content">
-    <div class="hero-copy">
-      <p class="eyebrow">SV Hambuch</p>
-      <h1><%= hero.heading %></h1>
-      <p class="lead"><%= hero.subheading %></p>
-      <div class="hero-actions">
-        <a class="btn primary" href="<%= hero.primaryCta.href %>"><%= hero.primaryCta.label %></a>
-        <a class="btn secondary" href="<%= hero.secondaryCta.href %>"><%= hero.secondaryCta.label %></a>
-      </div>
+<section class="hero home-welcome">
+  <div class="container home-welcome-inner">
+    <div class="home-welcome-copy">
+      <p class="eyebrow">SV 1976 Hambuch e.V.</p>
+      <h1><%= home.hero.heading %></h1>
+      <p class="lead"><%= home.hero.subheading %></p>
     </div>
-    <img class="hero-logo" src="/images/Logo_SV_Hambuch.png" alt="Wappen des SV Hambuch">
+    <img class="home-welcome-logo" src="/images/Logo_Jubilaeum.png" alt="Jubiläumslogo des SV Hambuch">
   </div>
 </section>
 
-<section class="section highlight">
-  <div class="container">
-    <header class="section-header">
-      <h2>Wofür wir stehen</h2>
-      <p>Gemeinschaft, sportlicher Erfolg und Nachwuchsförderung – dafür engagieren sich Ehrenamtliche und Aktive gleichermaßen.</p>
-    </header>
-    <div class="grid three">
-      <% highlights.forEach((item) => { %>
-        <article class="card">
-          <h3><%= item.title %></h3>
-          <p><%= item.description %></p>
-        </article>
+<section class="section jubilee-section" aria-labelledby="jubilee-title">
+  <div class="container jubilee-intro">
+    <p class="eyebrow section-eyebrow"><%= home.anniversary.eyebrow %></p>
+    <h2 id="jubilee-title"><%= home.anniversary.title %></h2>
+    <p><%= home.anniversary.intro %></p>
+  </div>
+
+  <div class="container anniversary-gallery" data-anniversary-gallery>
+    <button class="gallery-stage" type="button" data-gallery-stage aria-label="Jubiläumsbild groß anzeigen">
+      <img
+        data-gallery-image
+        src="<%= home.anniversary.slides[0].image %>"
+        alt="<%= home.anniversary.slides[0].alt %>"
+      >
+      <span class="gallery-overlay">
+        <strong data-gallery-year><%= home.anniversary.slides[0].year %></strong>
+        <span data-gallery-title><%= home.anniversary.slides[0].title %></span>
+      </span>
+    </button>
+
+    <div class="gallery-controls" aria-label="Galerie-Steuerung">
+      <button class="gallery-control" type="button" data-gallery-prev aria-label="Vorheriges Jubiläumsbild anzeigen">
+        <span aria-hidden="true">&#8592;</span>
+      </button>
+      <button class="gallery-control gallery-control-toggle" type="button" data-gallery-toggle aria-label="Automatischen Bildwechsel pausieren" aria-pressed="false">
+        <span data-gallery-toggle-icon aria-hidden="true">&#10074;&#10074;</span>
+      </button>
+      <button class="gallery-control" type="button" data-gallery-next aria-label="Nächstes Jubiläumsbild anzeigen">
+        <span aria-hidden="true">&#8594;</span>
+      </button>
+    </div>
+
+    <p class="gallery-caption" data-gallery-caption><%= home.anniversary.slides[0].text %></p>
+
+    <ol class="gallery-timeline" aria-label="Jubiläums-Zeitleiste">
+      <% home.anniversary.slides.forEach((slide, index) => { %>
+        <li class="timeline-item <%= index % 2 === 0 ? 'is-left' : 'is-right' %>">
+          <button
+            class="timeline-stop <%= index === 0 ? 'is-active' : '' %>"
+            type="button"
+            data-gallery-index="<%= index %>"
+            data-year="<%= slide.year %>"
+            data-title="<%= slide.title %>"
+            data-text="<%= slide.text %>"
+            data-image="<%= slide.image %>"
+            data-alt="<%= slide.alt %>"
+            aria-pressed="<%= index === 0 ? 'true' : 'false' %>"
+          >
+            <span class="timeline-year-badge"><%= slide.year %></span>
+            <span class="timeline-card">
+              <img src="<%= slide.image %>" alt="">
+              <span><%= slide.title %></span>
+            </span>
+          </button>
+        </li>
       <% }) %>
-    </div>
+    </ol>
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div>
-      <h2>Aktuelle News</h2>
-      <p>Bleib auf dem Laufenden über Spiele, Events und Aktionen beim SV Hambuch.</p>
-    </div>
-    <a class="btn link" href="/news">Alle News ansehen</a>
+<div class="gallery-lightbox" data-gallery-lightbox aria-hidden="true">
+  <button class="gallery-lightbox-backdrop" type="button" data-gallery-lightbox-close aria-label="Großansicht schließen"></button>
+  <div class="gallery-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Jubiläumsbild groß">
+    <button class="gallery-lightbox-close" type="button" data-gallery-lightbox-close aria-label="Großansicht schließen">&#215;</button>
+    <img data-gallery-lightbox-image src="" alt="">
   </div>
-  <div class="container news-preview">
-    <% news.slice(0, 3).forEach((entry) => { %>
-      <article class="news-card">
-        <time datetime="<%= entry.date %>"><%= entry.formattedDate %></time>
-        <h3><%= entry.title %></h3>
-        <p><%= entry.summary %></p>
-        <a class="read-more" href="/news#<%= entry.slug %>">Mehr erfahren</a>
+</div>
+
+<section class="section notices-section" aria-labelledby="notices-title">
+  <div class="container split section-top">
+    <div>
+      <h2 id="notices-title">Wichtige Meldungen</h2>
+      <p>Aktuelle Hinweise, Termine und Unterlagen, die gerade besonders sichtbar sein sollen.</p>
+    </div>
+  </div>
+
+  <div class="container notices-grid">
+    <% home.importantNotices.forEach((notice) => { %>
+      <article class="notice-item">
+        <img src="<%= notice.image %>" alt="<%= notice.imageAlt %>">
+        <div class="notice-copy">
+          <p class="feature-tag"><%= notice.label %></p>
+          <h3><%= notice.title %></h3>
+          <p><%= notice.text %></p>
+          <% if (notice.href === '#') { %>
+            <span class="read-more is-disabled"><%= notice.linkLabel %></span>
+          <% } else { %>
+            <a class="read-more" href="<%= notice.href %>"><%= notice.linkLabel %></a>
+          <% } %>
+        </div>
       </article>
     <% }) %>
   </div>
 </section>
 
-<section class="section cta">
-  <div class="container cta-box">
+<section class="section highlight" id="news" aria-labelledby="news-title">
+  <div class="container split section-top">
     <div>
-      <h2>Lust auf Teamgeist?</h2>
-      <p>Ganz egal ob Jugend, Senioren oder Breitensport – wir freuen uns auf neue Gesichter. Schau beim Training vorbei oder nimm Kontakt mit uns auf.</p>
+      <h2 id="news-title">News</h2>
+      <p>Aktuelle Artikel aus dem Verein und Hinweise auf die wichtigsten Neuigkeiten.</p>
     </div>
-    <div class="cta-actions">
-      <a class="btn light" href="/trainingszeiten">Trainingszeiten</a>
-      <a class="btn outline" href="/kontakt">Kontakt aufnehmen</a>
-    </div>
+  </div>
+
+  <div class="container home-news-list">
+    <% news.forEach((entry) => { %>
+      <article class="card home-news-item <%= entry.images && entry.images.length ? 'has-media' : 'has-no-media' %>">
+        <% if (entry.images && entry.images.length) { %>
+          <div class="home-news-media">
+            <img src="<%= entry.images[0].src %>" alt="<%= entry.images[0].alt %>">
+          </div>
+        <% } %>
+        <div class="home-news-copy">
+          <div class="home-news-meta">
+            <time datetime="<%= entry.date %>"><%= entry.formattedDate %></time>
+            <span><%= entry.category %></span>
+          </div>
+          <h3><%= entry.title %></h3>
+          <p><%= entry.summary %></p>
+          <a class="read-more" href="/news/<%= entry.slug %>">Zum Artikel</a>
+        </div>
+      </article>
+    <% }) %>
   </div>
 </section>

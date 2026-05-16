@@ -1,8 +1,8 @@
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Unsere Teams</p>
-    <h1>Mannschaften beim SV Hambuch</h1>
-    <p class="lead">Vom Nachwuchs bis zu den Senioren – gemeinsam stark auf dem Platz.</p>
+    <p class="eyebrow">Mannschaften & Angebote</p>
+    <h1>Fußball beim SV Hambuch ist Teamarbeit im besten Sinn</h1>
+    <p class="lead">Vom Seniorenbereich in der regionalen Spielgemeinschaft bis zu inklusiven und dörflichen Formaten bleibt der Verein breit aufgestellt.</p>
   </div>
 </section>
 
@@ -11,17 +11,13 @@
     <% teams.forEach((team) => { %>
       <article class="card team-card">
         <h2><%= team.name %></h2>
-        <% if (team.league) { %>
-          <p class="meta"><strong>Spielklasse:</strong> <%= team.league %></p>
-        <% } %>
+        <p class="meta"><%= team.label %></p>
         <p><%= team.description %></p>
-        <% if (team.training) { %>
-          <ul class="bullet-list">
-            <% team.training.forEach((slot) => { %>
-              <li><%= slot %></li>
-            <% }) %>
-          </ul>
-        <% } %>
+        <ul class="bullet-list">
+          <% team.items.forEach((item) => { %>
+            <li><%= item %></li>
+          <% }) %>
+        </ul>
       </article>
     <% }) %>
   </div>
