@@ -1308,13 +1308,13 @@ a:focus-visible {
   .home-welcome-inner {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    justify-items: start;
+    justify-items: center;
   }
 
   .home-welcome-logo {
     order: -1;
     width: min(72vw, 320px);
-    justify-self: start;
+    justify-self: center;
     transform: none;
   }
 
