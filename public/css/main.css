@@ -193,6 +193,49 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
+.anniversary-info {
+  display: grid;
+  gap: 0.18rem;
+  width: min(100%, 460px);
+  margin-top: 1.4rem;
+  padding: 1rem 1.15rem;
+  border-left: 5px solid #EEDD7C;
+  border-radius: var(--radius-sm);
+  background: #EEDD7C;
+  color: var(--green-600);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.anniversary-info:hover,
+.anniversary-info:focus-visible {
+  color: var(--green-600);
+  background: #EEDD7C;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.anniversary-info-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.anniversary-info-main {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.anniversary-info-action {
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.24em;
+}
+
 .home-welcome-logo {
   width: min(100%, 520px);
   justify-self: end;
@@ -400,6 +443,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 
 .gallery-overlay {
@@ -423,9 +467,17 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.gallery-overlay:has([data-gallery-title]:empty) {
+  display: none;
+}
+
 .gallery-caption {
   margin: 0;
   color: var(--gray-600);
+}
+
+.gallery-caption:empty {
+  display: none;
 }
 
 .gallery-controls {
@@ -549,6 +601,7 @@ a:focus-visible {
 }
 
 .timeline-stop {
+  position: relative;
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
@@ -560,21 +613,19 @@ a:focus-visible {
   cursor: pointer;
 }
 
-.timeline-year-badge {
+.timeline-stop::before {
+  content: "";
   grid-column: 2;
   z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 78px;
-  height: 78px;
+  display: block;
+  width: 26px;
+  height: 26px;
   justify-self: center;
   border-radius: 999px;
   border: 4px solid var(--white);
-  background: var(--green-600);
-  color: var(--gold-100);
-  font-weight: 700;
+  background: var(--gold-500);
   box-shadow: 0 12px 28px rgba(30, 56, 28, 0.16);
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .timeline-card {
@@ -604,11 +655,16 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover;
+  object-position: top center;
   border-radius: var(--radius-sm);
 }
 
 .timeline-card span {
   font-weight: 700;
+}
+
+.timeline-card span:empty {
+  display: none;
 }
 
 .timeline-stop:hover .timeline-card,
@@ -624,11 +680,10 @@ a:focus-visible {
   box-shadow: 0 20px 42px rgba(30, 56, 28, 0.18);
 }
 
-.timeline-stop:hover .timeline-year-badge,
-.timeline-stop:focus-visible .timeline-year-badge,
-.timeline-stop.is-active .timeline-year-badge {
-  background: var(--gold-500);
-  color: var(--green-600);
+.timeline-stop:hover::before,
+.timeline-stop:focus-visible::before,
+.timeline-stop.is-active::before {
+  background: var(--green-600);
   transform: scale(1.05);
 }
 
@@ -1243,8 +1298,24 @@ a:focus-visible {
   flex-wrap: wrap;
 }
 
+.footer-legal-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-address {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0 0 1rem;
+  font-style: normal;
+}
+
 .footer-links a:hover,
-.footer-links a:focus-visible {
+.footer-links a:focus-visible,
+.footer-legal-links a:hover,
+.footer-legal-links a:focus-visible {
   color: var(--gold-300);
 }
 
@@ -1256,6 +1327,40 @@ a:focus-visible {
 .copyright {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.legal-content {
+  display: grid;
+  gap: 2rem;
+  max-width: 860px;
+}
+
+.legal-content section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.legal-content h2 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--green-600);
+}
+
+.legal-content p {
+  margin: 0;
+}
+
+.legal-content address {
+  display: grid;
+  gap: 0.2rem;
+  font-style: normal;
+}
+
+.legal-content a {
+  color: var(--green-600);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 @media (max-width: 860px) {
@@ -1412,6 +1517,3 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 }
-
-
-

@@ -41,17 +41,24 @@
   <footer class="site-footer">
     <div class="container">
       <div>
-        <h3><%= site.name %></h3>
-        <p><%= site.venueAddress.join(' · ') %></p>
-        <p>1. Vorsitzender: <%= site.chair %> · Telefon: <a href="tel:<%= site.phoneHref %>"><%= site.phone %></a></p>
+        <h3>Vereinskontakt</h3>
+        <address class="footer-address">
+          <% site.postalAddress.forEach((line) => { %>
+            <span><%= line %></span>
+          <% }) %>
+        </address>
+        <p>1. Vorsitzender: <%= site.chair %></p>
+        <p>Telefon: <a href="tel:<%= site.phoneHref %>"><%= site.phone %></a></p>
         <p class="footer-note">Jubiläumsjahr <%= site.jubileeYear %> · <%= site.anniversary %> Jahre SV Hambuch</p>
       </div>
       <div class="footer-links">
-        <a href="/verein">Verein</a>
-        <a href="/mannschaften">Mannschaften</a>
-        <a href="/trainingszeiten">Sportstätten</a>
-        <a href="/#news">News</a>
-        <a href="/kontakt">Kontakt</a>
+        <% navItems.forEach((item) => { %>
+          <a href="<%= item.url %>"><%= item.label %></a>
+        <% }) %>
+      </div>
+      <div class="footer-legal-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
       </div>
       <p class="copyright">&copy; <span id="year"></span> <%= site.name %> Alle Rechte vorbehalten.</p>
     </div>

@@ -2,48 +2,55 @@ module.exports = {
   hero: {
     heading: 'Willkommen beim SV Hambuch',
     subheading:
-      "", //'Im Jubiläumsjahr 2026 stehen fünf Jahrzehnte Vereinsleben mit gemeinsamen Erinnerungen im Mittelpunkt.'
+      ''
   },
   anniversary: {
     eyebrow: 'Jubiläum 2026',
     title: '50 Jahre SV Hambuch',
     intro:
-      'Bilder und Erinnerungen aus fünf Jahrzehnten Vereinsleben.',
+      'Ein halbes Jahrhundert mit vielen Erinnerungen: ein Blick zurück in Bildern.',
     slides: [
       {
         year: '1976',
-        title: 'Gründung',
-        text: 'Der heutige SV 1976 Hambuch e.V. beginnt seine Vereinsgeschichte.',
+        title: '',
+        text: '',
         imageBase: '1976',
         alt: 'Jubiläumsbild zum Gründungsjahr 1976'
       },
       {
+        year: '1980',
+        title: '',
+        text: '',
+        imageBase: '1980',
+        alt: 'Archivbild des SV Hambuch'
+      },
+      {
         year: '1986',
-        title: 'Erstes Jahrzehnt',
-        text: 'Vereinsleben, Spieltage und Ehrenamt wachsen zusammen.',
+        title: '',
+        text: '',
         imageBase: '1986',
         alt: 'Jubiläumsbild zum Vereinsjahr 1986'
       },
       {
         year: '1996',
-        title: 'Neuer Rasenplatz',
-        text: 'Der heutige Sportplatz an der Schulstraße prägt den Verein.',
+        title: '',
+        text: '',
         imageBase: '1996',
         alt: 'Jubiläumsbild zum Vereinsjahr 1996'
       },
       {
         year: '2016',
-        title: '40 Jahre',
-        text: 'Tradition und Nachwuchsarbeit tragen den Verein weiter.',
+        title: '',
+        text: '',
         imageBase: '2016',
-        alt: 'Platzhalterbild zum Vereinsjahr 2016'
+        alt: 'Jubiläumsbild zum Vereinsjahr 2016'
       },
       {
         year: '2026',
-        title: 'Jubiläumsjahr',
-        text: '50 Jahre SV Hambuch werden gemeinsam gefeiert.',
+        title: '',
+        text: '',
         imageBase: '2026',
-        alt: 'Platzhalterbild zum Jubiläumsjahr 2026'
+        alt: 'Jubiläumsbild zum Jubiläumsjahr 2026'
       }
     ]
   },

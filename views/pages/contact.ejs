@@ -2,7 +2,7 @@
   <div class="container">
     <p class="eyebrow">Melde dich</p>
     <h1>Kontakt zum SV Hambuch</h1>
-    <p class="lead">Fragen zu Mitgliedschaft, Trainingsorten, Jubiläum oder Vereinsveranstaltungen lassen sich am schnellsten direkt mit dem Verein klären.</p>
+    <p class="lead">Fragen zu Mitgliedschaft, Angeboten und Veranstaltungen lassen sich am schnellsten direkt mit dem Verein klären.</p>
   </div>
 </section>
 
@@ -18,47 +18,6 @@
       <p><strong><%= contact.contactPerson.role %>:</strong> <%= contact.contactPerson.name %></p>
       <p><strong>Telefon:</strong> <a href="tel:<%= contact.phoneHref %>"><%= contact.phone %></a></p>
       <p><%= contact.note %></p>
-
-      <div class="contact-stack">
-        <article class="card">
-          <h3>Sportplatz</h3>
-          <% contact.venueAddress.forEach((line) => { %>
-            <p><%= line %></p>
-          <% }) %>
-        </article>
-        <article class="card">
-          <h3>Probstei</h3>
-          <% contact.meetingPlace.forEach((line) => { %>
-            <p><%= line %></p>
-          <% }) %>
-        </article>
-      </div>
     </div>
-
-    <form id="formular" class="contact-form" method="post" action="https://formspree.io/f/xaygvapo">
-      <h2>Nachricht senden</h2>
-      <p>Deine Anfrage landet direkt beim Verein und ist der beste Weg für aktuelle Rückfragen.</p>
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Dein Name" required>
-
-      <label for="email">E-Mail</label>
-      <input id="email" name="_replyto" type="email" placeholder="deine@mail.de" required>
-
-      <label for="topic">Thema</label>
-      <select id="topic" name="topic" required>
-        <option value="">Bitte auswählen</option>
-        <option value="mitgliedschaft">Mitgliedschaft</option>
-        <option value="training">Training & Mannschaften</option>
-        <option value="jubilaeum">Jubiläum 2026</option>
-        <option value="veranstaltung">Veranstaltungen</option>
-        <option value="sonstiges">Sonstiges</option>
-      </select>
-
-      <label for="message">Nachricht</label>
-      <textarea id="message" name="message" rows="5" placeholder="Wie können wir helfen?" required></textarea>
-
-      <button class="btn primary" type="submit">Nachricht senden</button>
-      <p class="privacy-hint">Mit dem Absenden erklärst du dich mit der Speicherung deiner Angaben zur Kontaktaufnahme einverstanden.</p>
-    </form>
   </div>
 </section>

@@ -1,0 +1,65 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Rechtliches</p>
+    <h1>Datenschutzerklärung</h1>
+    <p class="lead">Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container legal-content">
+    <section>
+      <h2>Verantwortlicher</h2>
+      <address>
+        <% site.postalAddress.forEach((line) => { %>
+          <span><%= line %></span>
+        <% }) %>
+      </address>
+      <p>Vertreten durch: <%= site.chair %>, 1. Vorsitzender</p>
+      <p>Telefon: <a href="tel:<%= site.phoneHref %>"><%= site.phone %></a></p>
+      <p>E-Mail: <%= legal.email %></p>
+    </section>
+
+    <section>
+      <h2>Allgemeine Hinweise</h2>
+      <p>Wir nehmen den Schutz personenbezogener Daten ernst. Personenbezogene Daten sind alle Informationen, mit denen eine natürliche Person direkt oder indirekt identifiziert werden kann.</p>
+      <p>Diese Datenschutzerklärung informiert darüber, welche Daten beim Besuch unserer Website verarbeitet werden und welche Rechte betroffene Personen haben.</p>
+    </section>
+
+    <section>
+      <h2>Aufruf der Website und Server-Logfiles</h2>
+      <p>Beim Aufruf dieser Website werden durch den Webserver technisch notwendige Daten verarbeitet. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, übertragene Datenmenge, Browsertyp, Betriebssystem und die zuvor besuchte Seite gehören.</p>
+      <p>Die Verarbeitung erfolgt, damit die Website ausgeliefert, stabil betrieben und vor Missbrauch geschützt werden kann. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im sicheren und zuverlässigen Betrieb dieser Website.</p>
+      <p>Server-Logfiles werden nur so lange gespeichert, wie dies für den Betrieb, die Sicherheit und die Fehleranalyse erforderlich ist.</p>
+    </section>
+
+    <section>
+      <h2>Kontaktaufnahme</h2>
+      <p>Wenn Sie uns telefonisch oder auf anderem Weg kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage mit einer Mitgliedschaft oder vorvertraglichen Maßnahmen zusammenhängt, im Übrigen Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    </section>
+
+    <section>
+      <h2>Externe Schriftarten</h2>
+      <p>Diese Website lädt Schriftarten über <%= legal.fontsProvider.name %> (<a href="<%= legal.fontsProvider.url %>" target="_blank" rel="noreferrer"><%= legal.fontsProvider.url %></a>). Beim Laden der Schriftarten kann Ihre IP-Adresse an den Anbieter übertragen werden, damit die Schriftdateien an Ihren Browser ausgeliefert werden können.</p>
+      <p>Nach Angaben des Anbieters arbeitet Bunny Fonts ohne Tracking und ohne Cookies. Weitere Informationen finden Sie in der Datenschutzerklärung des Anbieters: <a href="<%= legal.fontsProvider.privacyUrl %>" target="_blank" rel="noreferrer"><%= legal.fontsProvider.privacyUrl %></a></p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in einer einheitlichen und performanten Darstellung der Website.</p>
+    </section>
+
+    <section>
+      <h2>Cookies und Analyse</h2>
+      <p>Diese Website setzt derzeit keine eigenen Analyse- oder Marketing-Cookies ein und verwendet keine Webanalyse-Tools.</p>
+    </section>
+
+    <section>
+      <h2>Ihre Rechte</h2>
+      <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen bestimmte Verarbeitungen.</p>
+      <p>Außerdem haben Sie das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen Datenschutzrecht verstößt.</p>
+    </section>
+
+    <section>
+      <h2>Aktualität dieser Datenschutzerklärung</h2>
+      <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich diese Website oder die rechtlichen Anforderungen ändern.</p>
+    </section>
+  </div>
+</section>

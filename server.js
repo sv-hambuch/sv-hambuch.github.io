@@ -23,10 +23,8 @@ const site = {
 
 const navItems = [
   { key: 'home', label: 'Startseite', url: '/' },
-  { key: 'club', label: 'Verein', url: '/verein' },
-  { key: 'teams', label: 'Mannschaften', url: '/mannschaften' },
-  { key: 'schedule', label: 'Sportstätten', url: '/trainingszeiten' },
-  { key: 'news', label: 'News', url: '/#news' },
+  { key: 'anniversary', label: '50 Jahre', url: '/#50-jahre' },
+  { key: 'news', label: 'News', url: '/#wichtige-meldungen' },
   { key: 'contact', label: 'Kontakt', url: '/kontakt' }
 ];
 
@@ -88,21 +86,21 @@ const club = {
   mission:
     'Der SV 1976 Hambuch e.V. verbindet Fußball, Ehrenamt und Dorfgemeinschaft im Herzen der Eifel.',
   stats: [
-    { value: '1976', label: 'offizielles Gründungsjahr des heutigen Vereins' },
+    { value: '1976', label: 'Gründungsjahr des SV Hambuch' },
     { value: '50', label: 'Jahre SV Hambuch im Jubiläumsjahr 2026' },
     { value: '1996', label: 'Einweihung des heutigen Rasenplatzes an der Schulstraße' },
     { value: '2023', label: 'LED-Umrüstung mit mehr als 60 % Stromersparnis' }
   ],
   intro: [
-    'Der Verein tritt offiziell als SV 1976 Hambuch e.V. auf und geht 2026 in sein 50. Jahr. Damit ist das Jubiläum nicht nur ein Anlass zum Feiern, sondern auch ein sichtbarer Punkt in der laufenden Vereinsentwicklung.',
-    'Zum heutigen Profil gehören Seniorenfußball in der regionalen Spielgemeinschaft, Nachwuchsarbeit in Kooperationen, inklusive Sportangebote und feste Dorfveranstaltungen. Der SV ist damit deutlich mehr als ein Spieltagsverein.'
+    'Seit 1976 steht der SV Hambuch für Fußball, Ehrenamt und Zusammenhalt im Dorf. 2026 feiern wir 50 Jahre Vereinsgeschichte.',
+    'Heute gehören Seniorenfußball, Nachwuchsarbeit, inklusive Sportangebote und feste Dorfveranstaltungen zum Vereinsleben. Der SV Hambuch ist Treffpunkt, Sportverein und Gemeinschaft zugleich.'
   ],
   values: ['Dorfverbundenheit', 'Ehrenamt', 'Nachwuchsförderung', 'Offenheit & Inklusion'],
   timeline: [
     {
       year: '1976',
       title: 'SV 1976 Hambuch e.V.',
-      text: 'Der heutige Verein firmiert offiziell mit dem Gründungsjahr 1976 und feiert deshalb im Jahr 2026 sein 50-jähriges Jubiläum.'
+      text: 'Der SV Hambuch wird gegründet und legt den Grundstein für fünf Jahrzehnte Vereinsleben.'
     },
     {
       year: '1996',
@@ -117,17 +115,17 @@ const club = {
     {
       year: '2023',
       title: 'LED-Flutlicht am Sportplatz',
-      text: 'Seit Juni 2023 sorgt eine neue LED-Anlage für bessere Ausleuchtung und laut Ortsgemeinde für eine Stromersparnis von mehr als 60 Prozent.'
+      text: 'Seit Juni 2023 sorgt eine neue LED-Anlage für bessere Ausleuchtung und deutlich geringeren Stromverbrauch.'
     },
     {
       year: '2026',
       title: 'Jubiläumsjahr',
-      text: 'Der Verein feiert 50 Jahre SV Hambuch. Öffentliche Hinweise aus 2025 zeigen, dass die Vorbereitungen dafür bereits früh angelaufen sind.'
+      text: 'Wir feiern 50 Jahre SV Hambuch und blicken gemeinsam auf viele Erinnerungen, Spiele und Begegnungen zurück.'
     }
   ],
   highlights: [
-    'Die Jahreshauptversammlung 2026 wurde für Freitag, den 20. März 2026, 20:00 Uhr in der Probstei angekündigt.',
-    'Der Sportplatz Hambuch ist laut Ortsseite ein moderner Rasenplatz mit Lauf- und Sprunganlage sowie Sportlerheim.',
+    'Die Jahreshauptversammlung 2026 findet am Freitag, den 20. März 2026, um 20:00 Uhr in der Probstei statt.',
+    'Der Sportplatz Hambuch ist unsere sportliche Heimat mit Rasenplatz, Lauf- und Sprunganlage sowie Sportlerheim.',
     'Die Sport-/Mehrzweckhalle wird im Dorf nicht nur für Fußball genutzt, sondern auch für weitere Hallensport- und Gemeinschaftsangebote.'
   ]
 };
@@ -137,7 +135,7 @@ const teams = [
     name: 'Senioren-SG',
     label: 'Erwachsenenfußball',
     description:
-      'Der SV Hambuch trägt den Seniorenbereich gemeinsam mit Nachbarvereinen. Offizielle Spielankündigungen und Ligaportale führen die SG in der Region unter verschiedenen SG-Bezeichnungen rund um Hambuch, Kaifenheim und Brohl.',
+      'Im Seniorenbereich arbeitet der SV Hambuch eng mit Nachbarvereinen zusammen. So bleibt der Fußball in der Region stark aufgestellt.',
     items: [
       'regionaler Spielbetrieb mit Partnervereinen aus der Umgebung',
       'Heimspiele an Standorten in Hambuch und Kaifenheim',
@@ -192,10 +190,10 @@ const teams = [
     name: 'Sport in der Halle',
     label: 'Breitensport',
     description:
-      'Neben dem Fußball gab es beim SV Hambuch immer wieder ergänzende Hallenangebote. Öffentlich dokumentiert ist zum Beispiel Bodyforming in der Sporthalle Hambuch.',
+      'Neben dem Fußball gehören auch ergänzende Angebote in der Halle zum Vereinsleben.',
     items: [
       'Sport-/Mehrzweckhalle als zweiter wichtiger Vereinsort',
-      'beispielhaft dokumentiert: Bodyforming-Kurs in der Halle',
+      'Bewegungsangebote in der Halle',
       'Hallensport als Ergänzung zum Platzbetrieb'
     ]
   }
@@ -207,14 +205,14 @@ const schedulePage = {
       name: 'Sportplatz Hambuch',
       address: 'Schulstraße 11, 56761 Hambuch',
       description:
-        'Der heutige Rasenplatz wurde laut Ortsseite 1996 eingeweiht. Seit Juni 2023 verfügt die Anlage über moderne LED-Flutlichttechnik.',
+        'Der Rasenplatz an der Schulstraße ist seit 1996 die sportliche Heimat des SV Hambuch. Seit Juni 2023 verfügt die Anlage über moderne LED-Flutlichttechnik.',
       details: ['moderner Rasenplatz', 'Lauf- und Sprunganlage', 'Sportlerheim am Platz']
     },
     {
       name: 'Sport-/Mehrzweckhalle Hambuch',
       address: 'Schulstraße, 56761 Hambuch',
       description:
-        'Die 1984 erbaute Halle wird für Schulsport und verschiedene Vereinsangebote genutzt. Öffentlich genannt werden dort unter anderem Fußball, Tischtennis, Aerobic und Seniorensport.',
+        'Die Sport- und Mehrzweckhalle wird für Schulsport, Hallentraining und verschiedene Vereinsangebote genutzt.',
       details: ['wichtiger Winter- und Hallenstandort', 'Mehrfachnutzung für Vereins- und Dorfleben', 'auch für größere Veranstaltungen geeignet']
     },
     {
@@ -228,15 +226,15 @@ const schedulePage = {
       name: 'Bachstadion Kaifenheim',
       address: 'Lindenstraße, 56753 Kaifenheim',
       description:
-        'Für Heimspiele der regionalen Spielgemeinschaft taucht auch das Bachstadion Kaifenheim regelmäßig als Spielort auf.',
-      details: ['zusätzlicher SG-Spielort', 'Heimspielstätte in offiziellen Terminankündigungen', 'enger Bezug zur Partnerstruktur']
+        'Das Bachstadion Kaifenheim ist ein weiterer Spielort im Umfeld der regionalen Spielgemeinschaft.',
+      details: ['zusätzlicher SG-Spielort', 'Heimspielstätte im Partnerumfeld', 'enger Bezug zur Partnerstruktur']
     }
   ],
   recurringEvents: [
     {
       title: 'Jahreshauptversammlung 2026',
       meta: 'Freitag, 20. März 2026 · 20:00 Uhr',
-      text: 'Die Einladung zur Jahreshauptversammlung 2026 nennt die Probstei Hambuch als Versammlungsort.'
+      text: 'Wir laden alle Mitglieder zur Jahreshauptversammlung 2026 in die Probstei Hambuch ein.'
     },
     {
       title: 'Monatliches Inklusionstraining',
@@ -250,12 +248,12 @@ const schedulePage = {
     },
     {
       title: 'Dorfmeisterschaft',
-      meta: 'Sportplatz Hambuch · zuletzt öffentlich belegt am 8. Juli 2023',
+      meta: 'Sportplatz Hambuch',
       text: 'Die Dorfmeisterschaft bringt Straßenteams, Jugendliche und Zuschauer an einem Vereinstag zusammen.'
     }
   ],
   notice:
-    'Aktuelle Trainings- und Anstoßzeiten im Senioren- und Jugendbereich ändern sich saisonal. Für den jeweils neuesten Stand ist der direkte Kontakt zum Verein oder zur Spielgemeinschaft der verlässlichste Weg.'
+    'Trainings- und Anstoßzeiten ändern sich je nach Saison. Meldet euch gerne direkt beim Verein, wenn ihr mitspielen, zuschauen oder mehr erfahren möchtet.'
 };
 
 const contact = {
@@ -269,7 +267,18 @@ const contact = {
     name: site.chair
   },
   note:
-    'Für Fragen zu Mitgliedschaft, Veranstaltungen oder aktuellen Trainingszeiten ist der direkte Vereinskontakt der beste Einstieg.'
+    'Wir helfen bei allen Fragen gerne weiter.'
+};
+
+const legal = {
+  email: 'familie.loehr@myquix.de',
+  registerCourt: 'Amtsgericht Koblenz',
+  registerNumber: 'VR 2726',
+  fontsProvider: {
+    name: 'Bunny Fonts',
+    url: 'https://fonts.bunny.net',
+    privacyUrl: 'https://bunny.net/privacy/'
+  }
 };
 
 app.set('view engine', 'ejs');
@@ -346,6 +355,24 @@ app.get('/kontakt', (req, res) => {
     currentPage: 'contact',
     template: 'pages/contact',
     contact
+  });
+});
+
+app.get('/impressum', (req, res) => {
+  res.render('layout', {
+    title: 'Impressum',
+    currentPage: 'legal',
+    template: 'pages/impressum',
+    legal
+  });
+});
+
+app.get('/datenschutz', (req, res) => {
+  res.render('layout', {
+    title: 'Datenschutz',
+    currentPage: 'legal',
+    template: 'pages/datenschutz',
+    legal
   });
 });
 

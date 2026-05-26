@@ -59,7 +59,9 @@ if (anniversaryGallery) {
     activeIndex = index;
     image.src = activeStop.dataset.image;
     image.alt = activeStop.dataset.alt;
-    year.textContent = activeStop.dataset.year;
+    if (year) {
+      year.textContent = activeStop.dataset.year;
+    }
     title.textContent = activeStop.dataset.title;
     caption.textContent = activeStop.dataset.text;
 

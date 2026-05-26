@@ -4,9 +4,10 @@ module.exports = [
     title: 'Jahreshauptversammlung 2026 in der Probstei',
     category: 'Verein',
     summary:
-      'Die offizielle Einladung nennt Freitag, den 20. März 2026, 20:00 Uhr, als Termin für die Jahreshauptversammlung des SV 1976 Hambuch e.V. in der Probstei Hambuch.',
+      'Wir laden alle Mitglieder am Freitag, den 20. März 2026, um 20:00 Uhr zur Jahreshauptversammlung in die Probstei Hambuch ein.',
     body: [
-      'Die offizielle Einladung nennt Freitag, den 20. März 2026, 20:00 Uhr, als Termin für die Jahreshauptversammlung des SV 1976 Hambuch e.V. in der Probstei Hambuch.'
+      'Wir laden alle Mitglieder des SV 1976 Hambuch e.V. zur Jahreshauptversammlung ein.',
+      'Die Versammlung findet am Freitag, den 20. März 2026, um 20:00 Uhr in der Probstei Hambuch statt.'
     ],
     images: [],
     sourceLabel: 'Region im Blick, Ausgabe 11/2026',
@@ -17,10 +18,10 @@ module.exports = [
     title: 'Vorbereitung auf das 50-jährige Jubiläum',
     category: 'Jubiläum',
     summary:
-      'Im November 2025 informierte der Verein über neue Poloshirts, damit Mitglieder im Jubiläumsjahr 2026 einheitlich auftreten können. Die Ankündigung verweist ausdrücklich auf das 50-jährige Bestehen im kommenden Jahr.',
+      'Zum Jubiläumsjahr 2026 bereiten wir neue Poloshirts vor, damit der SV Hambuch bei Terminen und Veranstaltungen einheitlich auftreten kann.',
     body: [
-      'Im November 2025 informierte der Verein über neue Poloshirts, damit Mitglieder im Jubiläumsjahr 2026 einheitlich auftreten können.',
-      'Die Ankündigung verweist ausdrücklich auf das 50-jährige Bestehen im kommenden Jahr.'
+      'Zum 50-jährigen Jubiläum möchten wir als Verein auch nach außen gemeinsam auftreten.',
+      'Dafür bereiten wir neue Poloshirts vor, die bei Veranstaltungen, Spieltagen und Vereinsterminen getragen werden können.'
     ],
     images: ["public/images/news/Poloshirt.png"],
     sourceLabel: 'Hambuch.info / News',
@@ -31,10 +32,10 @@ module.exports = [
     title: 'Borfest als fester Sommertermin',
     category: 'Dorfleben',
     summary:
-      'Für 2024 war das Borfest offiziell für den 3. und 4. August angekündigt. Damit bleibt das Vereinsfest am Bor ein prägender Bestandteil des Hambucher Sommerkalenders.',
+      'Das Borfest gehört fest zum Hambucher Sommer und bringt Verein, Dorf und Gäste am Bor zusammen.',
     body: [
-      'Für 2024 war das Borfest offiziell für den 3. und 4. August angekündigt.',
-      'Damit bleibt das Vereinsfest am Bor ein prägender Bestandteil des Hambucher Sommerkalenders.'
+      'Das Borfest ist ein fester Termin im Hambucher Sommer.',
+      'Am Bor kommen Verein, Dorf und Gäste zusammen, um gemeinsam zu feiern und ein Stück Vereinsleben sichtbar zu machen.'
     ],
     images: [],
     sourceLabel: 'Hambuch.info / Borfest 2024',
@@ -45,10 +46,10 @@ module.exports = [
     title: 'Dorfmeisterschaft auf dem Sportplatz Hambuch',
     category: 'Gemeinschaft',
     summary:
-      'Bei der Dorfmeisterschaft treten traditionell Teams aus verschiedenen Straßen und Ortsteilen gegeneinander an. 2023 fand das Turnier am 8. Juli auf dem Sportplatz Hambuch statt.',
+      'Bei der Dorfmeisterschaft treten Teams aus Hambuch gegeneinander an und machen den Sportplatz zum Treffpunkt für das ganze Dorf.',
     body: [
-      'Bei der Dorfmeisterschaft treten traditionell Teams aus verschiedenen Straßen und Ortsteilen gegeneinander an.',
-      '2023 fand das Turnier am 8. Juli auf dem Sportplatz Hambuch statt.'
+      'Bei der Dorfmeisterschaft stehen nicht Tabellen und Punkte im Vordergrund, sondern der gemeinsame Tag auf dem Sportplatz.',
+      'Teams aus Hambuch treten gegeneinander an, Familien und Zuschauer kommen dazu und der Verein bringt das Dorf zusammen.'
     ],
     images: [],
     sourceLabel: 'Hambuch.info / Dorfmeisterschaft 2023',

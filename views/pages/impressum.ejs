@@ -1,0 +1,52 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Rechtliches</p>
+    <h1>Impressum</h1>
+    <p class="lead">Angaben gemäß §§ 5, 6 Digitale-Dienste-Gesetz (DDG)</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container legal-content">
+    <section>
+      <h2>Anbieter</h2>
+      <address>
+        <% site.postalAddress.forEach((line) => { %>
+          <span><%= line %></span>
+        <% }) %>
+      </address>
+    </section>
+
+    <section>
+      <h2>Vertreten durch</h2>
+      <p><%= site.chair %>, 1. Vorsitzender</p>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>Telefon: <a href="tel:<%= site.phoneHref %>"><%= site.phone %></a></p>
+      <p>E-Mail: <%= legal.email %></p>
+    </section>
+
+    <section>
+      <h2>Registereintrag</h2>
+      <p>Vereinsregister: <%= legal.registerCourt %></p>
+      <p>Registernummer: <%= legal.registerNumber %></p>
+    </section>
+
+    <section>
+      <h2>Haftung für Inhalte</h2>
+      <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir bemühen uns, die Inhalte aktuell und richtig zu halten.</p>
+    </section>
+
+    <section>
+      <h2>Haftung für Links</h2>
+      <p>Diese Website kann Links zu externen Websites enthalten. Auf deren Inhalte haben wir keinen Einfluss. Für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
+    </section>
+
+    <section>
+      <h2>Urheberrecht</h2>
+      <p>Die auf dieser Website veröffentlichten Inhalte, insbesondere Texte, Bilder, Fotos und Grafiken, unterliegen dem deutschen Urheberrecht. Eine Nutzung, Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der gesetzlichen Grenzen des Urheberrechts bedarf der vorherigen Zustimmung des jeweiligen Rechteinhabers. Soweit Inhalte nicht vom Verein erstellt wurden, werden die Rechte Dritter beachtet.</p>
+    </section>
+  </div>
+</section>
