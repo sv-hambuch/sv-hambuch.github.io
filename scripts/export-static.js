@@ -5,6 +5,7 @@ const app = require('../server');
 const rootDir = path.join(__dirname, '..');
 const outputDir = path.join(rootDir, 'docs');
 const publicDir = path.join(rootDir, 'public');
+const customDomain = 'sv-hambuch.de';
 
 const routes = [
   '/',
@@ -31,6 +32,7 @@ const copyPublicAssets = async () => {
   await fs.cp(publicDir, outputDir, { recursive: true });
   await removeUnusedAnniversaryImages();
   await fs.writeFile(path.join(outputDir, '.nojekyll'), '');
+  await fs.writeFile(path.join(outputDir, 'CNAME'), `${customDomain}\n`);
 };
 
 const removeUnusedAnniversaryImages = async () => {
