@@ -376,6 +376,10 @@ app.get('/datenschutz', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`SV Hambuch Website läuft auf http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`SV Hambuch Website läuft auf http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
