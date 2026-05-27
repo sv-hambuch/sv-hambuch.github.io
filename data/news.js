@@ -54,5 +54,21 @@ module.exports = [
     images: [],
     sourceLabel: 'Hambuch.info / Dorfmeisterschaft 2023',
     sourceUrl: 'https://hambuch.info/events/fussball-dorfmeisterschaft-2023/'
+  },
+  {
+    date: '2020-01-09',
+    title: 'Bodyforming in der Sporthalle Hambuch',
+    category: 'Sportangebot',
+    summary:
+      'Beim Bodyforming des SV Hambuch werden Rücken, Beine, Brust, Bauch, Po, Arme und Schultern trainiert. Der Kurs läuft donnerstags von 20:00 Uhr bis 21:00 Uhr in der Sporthalle Hambuch.',
+    body: [
+      'Der SV Hambuch bietet Bodyforming als abwechslungsreiches Sportprogramm für alle an, die ihren Körper mit Übungen für verschiedene Muskelgruppen in Schwung bringen möchten.',
+      'Trainiert werden unter anderem Rücken, Beine, Brust, Bauch, Po, Arme und Schultern. Auch Koordination und Gleichgewicht kommen dabei nicht zu kurz.',
+      'Der Kurs findet donnerstags von 20:00 Uhr bis 21:00 Uhr in der Sporthalle Hambuch statt. Die Kosten für zehn Stunden betragen 10 Euro für Mitglieder und 30 Euro für Nichtmitglieder.',
+      'Anmeldung und weitere Informationen gibt es per E-Mail an thomas.hetger@t-online.de.'
+    ],
+    images: ["public/images/Bodyforming.png"],
+    sourceLabel: 'Hambuch.info / SV Hambuch - Bodyforming',
+    sourceUrl: 'https://hambuch.info/events/sv-hambuch-bodyforming/'
   }
 ];
