@@ -140,6 +140,22 @@ a:focus-visible {
   padding: 0.25rem 0;
 }
 
+.main-nav .nav-social a {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.main-nav .nav-social svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
 .main-nav li::after {
   content: "";
   position: absolute;
@@ -1305,6 +1321,22 @@ a:focus-visible {
   font-size: 0.9rem;
 }
 
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 700;
+}
+
+.footer-social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
 .footer-address {
   display: grid;
   gap: 0.15rem;
@@ -1314,6 +1346,8 @@ a:focus-visible {
 
 .footer-links a:hover,
 .footer-links a:focus-visible,
+.footer-social-link:hover,
+.footer-social-link:focus-visible,
 .footer-legal-links a:hover,
 .footer-legal-links a:focus-visible {
   color: var(--gold-300);
