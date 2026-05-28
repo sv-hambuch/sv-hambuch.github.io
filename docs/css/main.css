@@ -1526,6 +1526,10 @@ a:focus-visible {
     gap: 0.9rem;
   }
 
+  .timeline-stop::before {
+    grid-column: 1;
+  }
+
   .timeline-year-badge {
     grid-column: 1;
     width: 48px;

@@ -50,6 +50,19 @@ if (anniversaryGallery) {
   let isPaused = false;
   let rotationTimer;
 
+  const openLightbox = (src, alt) => {
+    if (!lightbox || !lightboxImage) {
+      return;
+    }
+
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    window.clearInterval(rotationTimer);
+  };
+
   const setActiveSlide = (index) => {
     const activeStop = stops[index];
     if (!activeStop) {
@@ -84,23 +97,20 @@ if (anniversaryGallery) {
   };
 
   stops.forEach((stop, index) => {
-    stop.addEventListener('click', () => {
+    stop.addEventListener('click', (event) => {
       setActiveSlide(index);
+
+      if (event.target.closest('.timeline-card img')) {
+        openLightbox(stop.dataset.image, stop.dataset.alt);
+        return;
+      }
+
       restartRotation();
     });
   });
 
   stage.addEventListener('click', () => {
-    if (!lightbox || !lightboxImage) {
-      return;
-    }
-
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
-    lightbox.classList.add('is-open');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('lightbox-open');
-    window.clearInterval(rotationTimer);
+    openLightbox(image.src, image.alt);
   });
 
   previousButton.addEventListener('click', () => {
