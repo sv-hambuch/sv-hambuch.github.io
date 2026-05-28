@@ -16,6 +16,11 @@ const site = {
   chair: 'Mark Löhr',
   phone: '02653 6626',
   phoneHref: '+4926536626',
+  contentContact: {
+    name: 'Tobias Sesterhenn',
+    email: 'tobi.ses@gmx.de',
+    emailHref: 'mailto:tobi.ses@gmx.de'
+  },
   postalAddress: ['SV 1976 Hambuch e.V.', 'c/o Mark Löhr', 'Mohlpesch 3', '56761 Hambuch'],
   venueAddress: ['Sportplatz Hambuch', 'Schulstraße 11', '56761 Hambuch'],
   meetingPlace: ['Probstei Hambuch', 'Hauptstraße 35', '56761 Hambuch']
@@ -266,12 +271,14 @@ const contact = {
     role: '1. Vorsitzender',
     name: site.chair
   },
+  contentContact: site.contentContact,
   note:
     'Wir helfen bei allen Fragen gerne weiter.'
 };
 
 const legal = {
   email: 'familie.loehr@myquix.de',
+  contentContact: site.contentContact,
   registerCourt: 'Amtsgericht Koblenz',
   registerNumber: 'VR 2726',
   fontsProvider: {

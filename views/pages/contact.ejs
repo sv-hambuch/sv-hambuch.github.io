@@ -19,5 +19,11 @@
       <p><strong>Telefon:</strong> <a href="tel:<%= contact.phoneHref %>"><%= contact.phone %></a></p>
       <p><%= contact.note %></p>
     </div>
+
+    <div class="contact-info">
+      <h2>Website-Inhalte</h2>
+      <p>Für Inhalte, Bilder und Hinweise zur Website ist <%= contact.contentContact.name %> Ansprechpartner.</p>
+      <p><strong>E-Mail:</strong> <a href="<%= contact.contentContact.emailHref %>"><%= contact.contentContact.email %></a></p>
+    </div>
   </div>
 </section>
